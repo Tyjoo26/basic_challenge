@@ -1,8 +1,14 @@
 <h1>Student Details</h1>
 <br>
-<h2>  <%= @student.name %></h2>
-<br>
-
+<h4>  <%= @student.name %></h4>
+<% @student.addresses.each do |address| %>
+<br>  <%= address.description %>
+<br>  <%= address.street %>
+<br>  <%= address.city %>
+<br>  <%= address.state %>
+<br>  <%= address.zipcode %>
+<% end %>
 <%= link_to "Edit", edit_student_path(@student) %>
+<%= link_to "Create New Address"  %>
 <br>
 <%= link_to "Back to Student Index", students_path %>
