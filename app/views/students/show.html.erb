@@ -7,8 +7,11 @@
 <br>  <%= address.city %>
 <br>  <%= address.state %>
 <br>  <%= address.zipcode %>
+<br>
 <% end %>
+<br>
 <%= link_to "Edit", edit_student_path(@student) %>
-<%= link_to "Create New Address"  %>
+<br>
+<%= link_to "Create New Address", new_student_address_path(@student)  %>
 <br>
 <%= link_to "Back to Student Index", students_path %>
